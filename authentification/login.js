@@ -19,14 +19,24 @@ function creerCompte(event) {
                    password: password.value,
                }
                sessionStorage.setItem("SESSION", JSON.parse(session));
-               if(localStorage.USERS){
-                   const USERS =JSON.parse(localStorage.USERS);
-                   if (USERS.find(cle => cle.email == session.email && cle.password == session.password)){
-                       window.location.href = "https://othniel-francky.github.io/Rendez-vous/";
-                   }else{
-                       errorPassword.textContent = "Login"
-                   }
-               }
+                if(localStorage.USERS){
+                    const USERS =JSON.parse(localStorage.USERS);
+                    if (USERS.find(cle => cle.email == session.email && cle.password == session.password)){
+                        window.location.href = "https://othniel-francky.github.io/Rendez-vous/";
+                    }else{
+                        sessionStorage.clear();
+                        errorPassword.textContent = "Email ou mot de passe incorrecte."
+                    }
+                }
+                if (localStorage.ADMIN){
+                    const ADMIN = JSON.parse(localStorage.ADMIN);
+                    if (ADMIN.find(cle => cle.email == session.email && cle.password == session.password)) {
+                        window.location.href = "https://othniel-francky.github.io/Rendez-vous/";
+                    } else {
+                        sessionStorage.clear();
+                        errorPassword.textContent = "Email ou mot de passe incorrecte."
+                    }
+                }
             } else {
                 password.focus();
                 confirmeEmail.value = "";
