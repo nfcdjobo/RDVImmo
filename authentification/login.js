@@ -1,3 +1,6 @@
+if (sessionStorage.SESSION) {
+    window.location.href = "https://othniel-francky.github.io/Rendez-vous/";
+}
 document.getElementById("creerCompte").addEventListener("click", creerCompte);
 function creerCompte(event) {
     const email = document.getElementById("email");
