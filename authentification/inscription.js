@@ -58,7 +58,7 @@ function creerCompte(event) {
                                         data.push(admin);
                                         localStorage.setItem("ADMIN", JSON.stringify(data));
                                         alert("Compte créé avec succès");
-                                        window.location.href = "./admin-login.html";
+                                        window.location.href = "https://nfcdjobo.github.io/RDVImmo/authentification/admin-login.html";
                                     }
                                 }else{
                                     const requette = JSON.parse(localStorage.getItem("USERS"));
@@ -87,7 +87,7 @@ function creerCompte(event) {
                                         data.push(user);
                                         localStorage.setItem("USERS", JSON.stringify(data));
                                         alert("Compte créé avec succès");
-                                        window.location.href = "./login.html";
+                                        window.location.href = "https://nfcdjobo.github.io/RDVImmo/authentification/login.html";
                                     }
                                 }
                                 
