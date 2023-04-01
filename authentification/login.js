@@ -1,8 +1,5 @@
-
-
 document.getElementById("creerCompte").addEventListener("click", creerCompte);
 function creerCompte(event) {
-
     const email = document.getElementById("email");
     const password = document.getElementById("password");
 
@@ -18,8 +15,9 @@ function creerCompte(event) {
                    email: email.value,
                    password: password.value,
                }
-               sessionStorage.setItem("SESSION", JSON.parse(session));
+               sessionStorage.setItem("SESSION", JSON.stringify(session));
                 if(localStorage.USERS){
+                    if (localStorage.USERS){}
                     const USERS =JSON.parse(localStorage.USERS);
                     if (USERS.find(cle => cle.email == session.email && cle.password == session.password)){
                         window.location.href = "https://othniel-francky.github.io/Rendez-vous/";
