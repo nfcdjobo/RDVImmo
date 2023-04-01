@@ -48,7 +48,7 @@ function creerCompte(event) {
                                             requette.push(user);
                                             localStorage.setItem("ADMIN", JSON.stringify(requette));
                                             alert("Compte créé avec succès");
-                                            window.location.href = "./admin-login.html";
+                                            window.location.href = "https://nfcdjobo.github.io/RDVImmo/authentification/admin-login.html";
                                         } else {
                                             alert("Ce compte est déjà utilisé");
                                         }
@@ -78,7 +78,7 @@ function creerCompte(event) {
                                             alert("Compte créé avec succès");
                                             window.location.href = "./login.html";
                                         }else{
-                                            alert("Ce compte est déjà utilisé");
+                                            window.location.href = "https://nfcdjobo.github.io/RDVImmo/authentification/login.html";
                                         }
                                             
                                         
