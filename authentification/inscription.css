@@ -1,0 +1,18 @@
+.contenaire{
+    background-color: aqua;
+    padding: .5rem;
+}
+
+.content{
+    padding: 1rem;
+
+}
+
+.form{
+    margin: 1rem;
+}
+
+.error{
+    color: red;
+    
+}
